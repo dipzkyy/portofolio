@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dipzkyy - Beginner Software Developer</title>
+    
+    <!-- Meta tags untuk SEO dan aksesibilitas -->
+    <meta name="description" content="Portofolio Diva Islamy Rizky Akbar - Software Developer pemula yang passionate dalam menciptakan solusi digital inovatif">
+    <meta name="keywords" content="web development, software developer, portfolio, programming, HTML, CSS, JavaScript">
+    <meta name="author" content="Diva Islamy Rizky Akbar">
+    
+    <!-- Open Graph tags untuk media sosial -->
+    <meta property="og:title" content="Portofolio Dipzkyy - Beginner Software Developer">
+    <meta property="og:description" content="Software Developer pemula yang passionate dalam menciptakan solusi digital inovatif">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dipzkyy.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-animation">
+                <div class="loading-logo">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="loading-text">
+                    <span class="loading-char">D</span>
+                    <span class="loading-char">I</span>
+                    <span class="loading-char">P</span>
+                    <span class="loading-char">Z</span>
+                    <span class="loading-char">K</span>
+                    <span class="loading-char">Y</span>
+                    <span class="loading-char">Y</span>
+                </div>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Animasi Latar Belakang -->
+    <div class="grid-bg"></div>
+    <div class="bg-animation">
+        <div class="bg-particles" id="bgParticles"></div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Pesan terkirim! Terima kasih atas kritik dan sarannya.</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigasi -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-code"></i>
+                    Dipzkyy<span>Portfolio</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#biodata">Biodata</a></li>
+                    <li><a href="#github">Project GitHub</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                    
+                    <!-- Download CV Button di Navbar -->
+                    <li class="nav-download">
+                        <a href="assets/cv.jpg" download="CV_Dipzkyy.jpg" class="download-cv-btn" id="downloadCvNav">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </a>
+                    </li>
+                    
+                    <!-- Menu Settings -->
+                    <li class="nav-settings">
+                        <div class="theme-switcher">
+                            <button id="themeToggle" class="theme-btn">
+                                <i class="fas fa-moon"></i>
+                                <span class="theme-text">Dark Mode</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu -->
+                <div class="hamburger" id="hamburgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <!-- Mobile Settings Menu -->
+                <div class="mobile-settings" id="mobileSettings">
+                    <div class="settings-content">
+                        <!-- Download CV Mobile -->
+                        <div class="setting-item">
+                            <a href="assets/cv.jpg" download="CV_Dipzkyy.jpg" class="download-cv-btn mobile-download-btn" id="downloadCvMobile">
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </a>
+                        </div>
+                        <div class="setting-item">
+                            <button id="mobileThemeToggle" class="theme-btn">
+                                <i class="fas fa-moon"></i>
+                                <span class="theme-text">Dark Mode</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section - DIPERBAIKI TECH ICONS -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="running-text-container">
+                        <h1 class="running-text" id="runningText">I'm <span>Dipzkyy</span></h1>
+                    </div>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+                    <div class="hero-description">
+                        <p class="desc-line">Seorang pengembang software pemula yang passionate dalam menciptakan solusi digital inovatif.</p>
+                        <p class="desc-line">Terus mengasah kemampuan dalam web development, programming, dan teknologi terkini</p>
+                        <p class="desc-line">untuk menghasilkan karya yang impactful.</p>
+                    </div>
+                </div>
+                
+                <!-- FIXED CODING SPHERE - Tech Icons tidak hilang lagi -->
+                <div class="hero-image">
+                    <div class="coding-sphere" id="codingSphere">
+                        <div class="sphere">
+                            <div class="orbit orbit-1"></div>
+                            <div class="orbit orbit-2"></div>
+                            <div class="orbit orbit-3"></div>
+                            
+                            <!-- Tech Icons dengan animasi masuk dari samping -->
+                            <div class="tech-icon html" title="HTML5" data-delay="0">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="tech-icon css" title="CSS3" data-delay="0.2">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="tech-icon js" title="JavaScript" data-delay="0.4">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="tech-icon react" title="React" data-delay="0.6">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-icon java" title="Java" data-delay="0.8">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="tech-icon python" title="Python" data-delay="1.0">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="tech-icon php" title="PHP" data-delay="1.2">
+                                <i class="fab fa-php"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biodata Section -->
+    <section id="biodata" class="biodata">
+        <div class="container">
+            <div class="section-title">
+                <h2>Biodata Diri</h2>
+            </div>
+            <div class="biodata-content">
+                <div class="biodata-photo scroll-animate" data-animation="left">
+                    <div class="photo-frame">
+                        <img src="assets/gwejh.jpg" alt="Diva Islamy Rizky Akbar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--primary); font-size: 2.5rem;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="biodata-info scroll-animate" data-animation="right">
+                    <div class="biodata-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4>Nama Lengkap</h4>
+                            <p>Diva Islamy Rizky Akbar</p>
+                        </div>
+                    </div>
+                    <div class="biodata-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <div>
+                            <h4>Tempat, Tanggal Lahir</h4>
+                            <p>Blitar, 07 September 2006</p>
+                        </div>
+                    </div>
+                    <div class="biodata-item">
+                        <i class="fas fa-venus-mars"></i>
+                        <div>
+                            <h4>Jenis Kelamin</h4>
+                            <p>Laki-laki</p>
+                        </div>
+                    </div>
+                    <div class="biodata-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mzdp12@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title scroll-animate" data-animation="bottom">
+                <h2>Teknologi yang Dikuasai</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card html scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Struktur web semantic</p>
+                </div>
+                <div class="skill-card css scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Styling responsive</p>
+                </div>
+                <div class="skill-card js scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Interaktivitas website</p>
+                </div>
+                <div class="skill-card react scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <p>Library JavaScript UI</p>
+                </div>
+                <div class="skill-card java scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Pemrograman OOP</p>
+                </div>
+                <div class="skill-card python scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Bahasa serbaguna</p>
+                </div>
+                <div class="skill-card php scroll-animate" data-animation="bottom">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <p>Server-side scripting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title scroll-animate" data-animation="bottom">
+                <h2>Riwayat Pendidikan</h2>
+            </div>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-content scroll-animate" data-animation="left">
+                        <h3>SMK Brantas Karangkates</h3>
+                        <p class="year">2022 - 2025</p>
+                        <p>Rekayasa Perangkat Lunak</p>
+                        <p>Kabupaten Malang, Jawa Timur</p>
+                    </div>
+                    <div class="education-logo">
+                        <div class="logo-container scroll-animate" data-animation="right">
+                            <img src="assets/brantas.png" alt="Logo SMK Brantas" class="logo-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--primary); font-size: 1.8rem;">
+                                <i class="fas fa-school"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-content scroll-animate" data-animation="right">
+                        <h3>PT Plasa Telkom Group Malang</h3>
+                        <p class="year">April 2024 - Oktober 2024</p>
+                        <p>Magang - Data Validation</p>
+                        <p>Validasi Data Customer Telkom</p>
+                    </div>
+                    <div class="education-logo">
+                        <div class="logo-container scroll-animate" data-animation="left">
+                            <img src="assets/telkom.png" alt="Logo Telkom Akses" class="logo-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--primary); font-size: 1.8rem;">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-content scroll-animate" data-animation="left">
+                        <h3>Universitas Islam Blitar</h3>
+                        <p class="year">Sekarang - </p>
+                        <p>Fakultas Teknologi dan Informasi</p>
+                        <p>Teknik Informatika - Semester 1</p>
+                    </div>
+                    <div class="education-logo">
+                        <div class="logo-container scroll-animate" data-animation="right">
+                            <img src="assets/unisba.png" alt="Logo UNISBA" class="logo-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; color: var(--primary); font-size: 1.8rem;">
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="github" class="github-projects">
+        <div class="container">
+            <div class="section-title scroll-animate" data-animation="bottom">
+                <h2>Project GitHub Saya</h2>
+                <p>Koleksi project dari semua akun GitHub saya</p>
+            </div>
+            
+            <!-- GitHub Accounts -->
+            <div class="github-accounts scroll-animate" data-animation="left">
+                <div class="account-tabs">
+                    <button class="account-tab active" data-account="all">
+                        <i class="fas fa-layer-group"></i>
+                        Semua Project
+                    </button>
+                    <button class="account-tab" data-account="dipaanakmbarep">
+                        <img src="https://github.com/dipaanakmbarep.png" alt="dipaanakmbarep" class="tab-avatar" loading="lazy">
+                        dipaanakmbarep
+                    </button>
+                    <button class="account-tab" data-account="dipzkyy">
+                        <img src="https://github.com/dipzkyy.png" alt="dipzkyy" class="tab-avatar" loading="lazy">
+                        dipzkyy
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="github-stats">
+                <div class="stat-card scroll-animate" data-animation="left">
+                    <i class="fas fa-code"></i>
+                    <h3 id="totalRepos">0</h3>
+                    <p>Total Repositories</p>
+                </div>
+                <div class="stat-card scroll-animate" data-animation="left">
+                    <i class="fas fa-star"></i>
+                    <h3 id="totalStars">0</h3>
+                    <p>Total Stars</p>
+                </div>
+                <div class="stat-card scroll-animate" data-animation="left">
+                    <i class="fas fa-code-branch"></i>
+                    <h3 id="totalForks">0</h3>
+                    <p>Total Forks</p>
+                </div>
+                <div class="stat-card scroll-animate" data-animation="left">
+                    <i class="fas fa-users"></i>
+                    <h3 id="totalFollowers">0</h3>
+                    <p>Total Followers</p>
+                </div>
+            </div>
+
+            <!-- Projects container -->
+            <div class="projects-container scroll-animate" data-animation="right">
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="loading-projects">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Memuat project dari GitHub...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="github-cta scroll-animate" data-animation="bottom">
+                <div class="cta-buttons">
+                    <a href="https://github.com/dipaanakmbarep" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i>
+                        dipaanakmbarep
+                    </a>
+                    <a href="https://github.com/dipzkyy" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        dipzkyy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title scroll-animate" data-animation="bottom">
+                <h2>Spesialisasi</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item scroll-animate" data-animation="left">
+                    <div class="portfolio-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Web Development</h3>
+                        <p>Pengembangan website responsif dan aplikasi web dengan teknologi terbaru.</p>
+                        <div class="portfolio-tags">
+                            <div class="tag">HTML/CSS</div>
+                            <div class="tag">JavaScript</div>
+                            <div class="tag">React</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item scroll-animate" data-animation="bottom">
+                    <div class="portfolio-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Software Engineering</h3>
+                        <p>Software Engineer yang penuh semangat dalam mengubah ide kompleks menjadi kode yang efisien dengan kolaborasi tim sebagai kunci.</p>
+                        <div class="portfolio-tags">
+                            <div class="tag">Java</div>
+                            <div class="tag">Python</div>
+                            <div class="tag">PHP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item scroll-animate" data-animation="right">
+                    <div class="portfolio-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Mobile App Development</h3>
+                        <p>Pengembangan aplikasi mobile untuk iOS dan Android dengan performa optimal.</p>
+                        <div class="portfolio-tags">
+                            <div class="tag">React Native</div>
+                            <div class="tag">Flutter</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item scroll-animate" data-animation="bottom">
+                    <div class="portfolio-img">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Database Development</h3>
+                        <p>Desain dan implementasi sistem database yang scalable dan efisien.</p>
+                        <div class="portfolio-tags">
+                            <div class="tag">MySQL</div>
+                            <div class="tag">MariaDB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title scroll-animate" data-animation="bottom">
+                <h2>Kritik & Saran</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info scroll-animate" data-animation="left">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Lokasi</h3>
+                            <p>Blitar, Jawa Timur, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>mzdp12@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>+62 813 5854 5681</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comment-alt"></i>
+                        <div>
+                            <h3>Pesan</h3>
+                            <p>Kritik dan saran Anda sangat berarti untuk pengembangan saya ke depan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form scroll-animate" data-animation="right">
+                    <form action="https://formspree.io/f/xyznaleo" method="POST" id="contactForm">
+                        <input type="hidden" name="_subject" value="Pesan Baru dari Portfolio Dipzkyy">
+                        <input type="hidden" name="_language" value="id">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" required id="nameInput">
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required id="emailInput">
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subjek" required id="subjectInput">
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Kritik dan saran Anda..." required id="messageInput"></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn">
+                            <span id="btnText">Kirim Kritik & Saran</span>
+                            <div id="btnLoader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Mengirim...
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/dipa_rizky/?__pwa=1" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/dipaanakmbarep" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/dipzkyy" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@dipa0709" class="social-link"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="copyright">© 2025 Dipzkyy Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
