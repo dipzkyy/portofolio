@@ -1,4 +1,33 @@
 /* ===== VARIABLES FOR DARK MODE ===== */
+/* Mobile First */
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
